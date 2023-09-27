@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package paidbus.ticket;
+
+service Ticket {
+  rpc NewTicket(NewTicketRequest) returns (NewTicketReply) {}
+}
+
+message NewTicketRequest { }
+
+message NewTicketReply {
+  repeated string tickets = 1;
+}
